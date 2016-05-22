@@ -7,7 +7,7 @@ layout: default
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -19,4 +19,12 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+  <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Newer Posts</a>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Older Posts</a>
+      {% endif %}
+  </div>
 </div>
