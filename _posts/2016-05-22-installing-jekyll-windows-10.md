@@ -21,6 +21,10 @@ It is very easy to install Jekyll and only requires the following command.
 
  - Run `gem install jekyll`
 
+The following is optional. I run pagination on my blog and therefore need the jekyll-paginate gem. Then configuration pagination as per the [Jekyll documentation](https://jekyllrb.com/docs/pagination/).
+
+ - Run `gem install jekyll-paginate`
+
 ### Site Creation
 Now you are ready to create and run your first Jekyll website. Running the following commands on the command prompt will create a new site and then serve the website.
 
