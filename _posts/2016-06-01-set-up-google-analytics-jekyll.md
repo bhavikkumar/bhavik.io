@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Google Analytics with Jekyll"
-date:   2016-05-22 17:30:00 +1200
+date:   2016-06-01 05:00:00 +1200
 ---
-Google analytics is easy to setup from the instructions which are provided by Google themselves. However, there are some quirks if you set it up with default settings. Mainly around if people are viewing the site via services such as Google translate<sup>[[1]](http://veithen.github.io/2015/01/05/jekyll-improving-ga-data-quality.html)</sup>.
+Google analytics is easy to set up from the instructions which are provided by Google themselves. However, there are some quirks if you set it up with default settings. Mainly around if people are viewing the site via services such as Google translate<sup>[[1]](http://veithen.github.io/2015/01/05/jekyll-improving-ga-data-quality.html)</sup>.
 
-The following should allow you to setup analystics without getting strange results when looking at the traffic in Google Analytics.
+The following should allow you to set up analytics without getting strange results when looking at the traffic in Google Analytics.
 
 Once you have the Google analytics setup, Google says `paste your tracking code snippet (unaltered, in its entirety) before the closing </head> tag on every web page on your site you wish to track`. 
 
@@ -36,6 +36,6 @@ Now we need to have the `analytics.html` included on all our pages, this can be 
     </head>
 {% endraw %}{% endhighlight %}
 
-You may have noticed that I've wrapped mine in a if statement, this is so that when testing on localhost I don't get analytics sent from my testing.
+You may have noticed that I've wrapped mine in an if statement, this is so that when testing on localhost I don't get analytics sent from my testing.
 
 The final step is to build the site with the production environment variable, the default for Jekyll is development. Since I am build my blog on Windows 10 and use powershell, the following command will get it to build with the analytics included `$env:JEKYLL_ENV="production"; jekyll build`

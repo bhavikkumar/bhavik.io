@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Installing Jekyll 3 on Windows 10"
-date:   2016-05-22 17:30:00 +1200
+date:   2016-05-25 5:00:00 +1200
 ---
 If you have found this page then I'm guessing you already know what Jekyll is, however the documentation for a Windows 10 installation of Jekyll v3 is a bit lacking and it is easier than I original thought it would be. 
 
