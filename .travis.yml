@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+ - 2.2
+
+install: gem install jekyll
+install: gem install jekyll-paginate
+install: gem install s3_website
+
+script: JEKYLL_ENV=production jekyll build
+
