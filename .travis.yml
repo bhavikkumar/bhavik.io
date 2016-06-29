@@ -2,7 +2,21 @@ language: ruby
 rvm:
  - 2.2
 
+branches:
+  only:
+  - master
+  
 install: gem install jekyll && gem install jekyll-paginate
 
 script: JEKYLL_ENV=production jekyll build
 
+deploy:
+  provider: s3
+  access_key_id:
+    secure: gTit1WArD+xaIrYS9s8TWcfwfOWc8e9J15FQZVw4R6ZoQ8WeYeuLV3c61rYPm3LsyCvVOFp7zfe3665Vl/R/AUpiZ+2bD4NY+94q/L65Kxl0/PFxfZXWcz3YY5EzbY84nLB9Um7OaIOcdOeE57TxZ6DXvyfYTQ2O2DsWufaEWUmH2tnKBLZQJ4RNF+9Ms1G6fePC5ksfZ/oIUuw8AIF4GP4i856XMmOd4UvU200DLJdFSeEgI+7sUiHhjaPRmHkvTmh8AMfEGJonbpLeuemNi/70diPHbtZuSD/tXtnK/61hiARI6xjjXDZ8snG0B7AgtAFyd6vlzXc5WlM1bk/huUq/o0ffCA54a+HIkvl9V0kEbiRf9+m5Uk4bIiG/CXqZTN+fFnj+FHBdBHIfylOCccZeFAgpezHOLg7mgnitJ7skF5Pt5UnVxBL8jNFLcZwyYDhOfDyRZkaEM2RpCH++sxCZfItQhAehy811mLvnRSPvbhTIRE3sq1/iVNQPOW3Z7DQHVUCAKw1UIsfzjEOjKIl7OcDapQakTDVffMXvaML2lPCJSOXYuO1l5sJ+hlI5I3cebUaZVbKwi5h82Xh0OjOeIrBf5BaqKQQLuvWZRb5O+S+e9ugkN64R9o61RlH4RADe8NZVLDiM5TRrG/FbSiTsLXDNaniSTr8CUjAifJ8=
+  secret_access_key:
+    secure: VVX1koCFR4DMa1zLNRWQQyF4yOnkvyfuWah6VS1Qn/oF+ptDqY05DZTFHeS2dYLwe2VpvPvbVZKWt4QFmZDnrAE8iJgWSJ40u0QBAdr24Huqpfu+P4a/RBwMMP64mO72FegQkZfH7I4S1B36qsQQvUHckwGPAxJMqLxc6SpLBTv5dgY9uBOWDHPdjEYcZPkG88w/2GX1u/nQ1ozesJXYIVeXjjgwd2r8cQMkxe1Boj3bIkYS8r1/Fl864tkoq5e8MCEiczo29XUMGyzDGlHa7nO/ybR0YtdqCG34suv153Q7T4V5xOkUFXWPQrhLxcPQHkMCvaYL3ISpGCEmmG3fyx6hspg9haAU9J4oLNNeiiT/088sdTPlQsydro4LMOSjS8aTgDlXW8R6X2078sgiZmcL3Pq3cJT7evhCd3BQidFAKoBxtJbhch0delHx1ZmzZ6bkfUYUUb3IiGX5n33W9FsNupwgvvP9cnbtLh69K4kgxFFLQrt+enLwyM8v8NpJxbPxaHfv8fVl6+9DooOij0qq4lbIjZwl4MErWBVGwhFvJ7+TbKbP1pHiK3Gg0z52ETF6g2lSn3bExi+SRU11oUOql+dVh93R7//QRym2NUp0/P1b1ABTcm4ZWkRdfQRs5YS9TgjSELAPm2HXZqckktToevcR8Vd9ymTcYWuah0g=
+  bucket: bhavik.io
+  skip_cleanup: true
+  region: us-west-2
+  local_dir: _site
