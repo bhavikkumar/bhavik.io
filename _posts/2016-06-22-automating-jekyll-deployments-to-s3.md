@@ -16,10 +16,10 @@ Jenkins will need access to the S3 bucket, I would recommend creating a specific
 The following plugins will need to be configured:
 
 - Git Plugin
-- S3 Publisher Plugin 0.8
+- S3 Publisher Plugin
 
 #### S3 Publisher Plugin Configuration
-The reason for using version 0.8 of the S3 publisher plugin is I've had issues with the latest version (0.12 at the time of this post).  To configure the plugin click on "Manage Jenkins" -> "Configure System", then scroll down to the Amazon S3 profiles section and fill in the details as shown in the following screenshot.
+To configure the plugin click on "Manage Jenkins" -> "Configure System", then scroll down to the Amazon S3 profiles section and fill in the details as shown in the following screenshot.
 
 ![Jenkins AWS S3 profile]({{ site.baseurl }}/assets/jenkins-s3-publisher.png)
 
