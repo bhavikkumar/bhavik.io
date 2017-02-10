@@ -14,6 +14,7 @@ I think it will be a fantastic way to learn and can be a realistic demo one day.
 
 ## What will the project consist of?
 At this stage I am thinking of the following at a high level.
+
  - Multiple microservices
   - With some dependencies between them.
  - A Front-End
@@ -23,6 +24,7 @@ At this stage I am thinking of the following at a high level.
  - Configuration Discovery
 
 In the end if I can have these additional items I think it will be great:
+
 - Auto Scaling
 - Analytics
 - Chaos Monkey
