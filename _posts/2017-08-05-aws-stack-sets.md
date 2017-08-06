@@ -2,7 +2,6 @@
 layout: post
 title:  "AWS Stack Sets"
 date:   2017-08-05 16:00:00 +1200
-published: false
 ---
 I've been doing a lot of work with AWS Organisations recently and there was a large amount of repetition across the accounts. This has now been resolved by AWS with the release of AWS Stack Sets. AWS already have good [documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html) regarding stack sets and best practices. This post is going to be on how I simplified my deployment across accounts using stack sets.
 
