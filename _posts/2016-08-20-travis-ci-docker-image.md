@@ -79,11 +79,11 @@ After a successful build, we login and then upload the docker image to Docker h 
 {% highlight YAML %}
  after_success:
  - docker login -u $DOCKER_USER -p $DOCKER_PASS
- - docker push $REPO:$TAG
  - if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
    docker tag $REPO:$TAG $REPO:$TRAVIS_BUILD_NUMBER;
    docker push $REPO:$TRAVIS_BUILD_NUMBER;
-   fi
+   fi 
+ - docker push $REPO:$TAG
 {% endhighlight %}
 
 This is a great start, we now have a public repository with our Docker image which we can pull down and run after every commit. Most companies will not want their Docker images available publically, therefore in the next blog post, I'll show how you can  push the images to AWS EC2 Container Registry from Travis-CI.
