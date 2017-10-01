@@ -72,14 +72,18 @@ Add the `docker build` step after you run `go build` in your build chain.
 script:
  - export TAG=`if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then echo "latest"; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi`
  - export REPO=bhavikk/level-three-rest
- - docker build -t level-three-rest -t $REPO:$TAG -t $REPO:$TRAVIS_BUILD_NUMBER -f Dockerfile .
+ - docker build -t $REPO:$TAG -f Dockerfile .
 {% endhighlight %}
 
 After a successful build, we login and then upload the docker image to Docker h ub. You can set the appropriate tags before uploading the image. One other interesting thing you can perform at this stage is running the docker image and running appropriate tests against it to ensure everything passes.
 {% highlight YAML %}
  after_success:
  - docker login -u $DOCKER_USER -p $DOCKER_PASS
- - docker push $REPO
+ - docker push $REPO:$TAG
+ - if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
+   docker tag $REPO:$TAG $REPO:$TRAVIS_BUILD_NUMBER;
+   docker push $REPO:$TRAVIS_BUILD_NUMBER;
+   fi
 {% endhighlight %}
 
 This is a great start, we now have a public repository with our Docker image which we can pull down and run after every commit. Most companies will not want their Docker images available publically, therefore in the next blog post, I'll show how you can  push the images to AWS EC2 Container Registry from Travis-CI.
