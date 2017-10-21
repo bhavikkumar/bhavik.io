@@ -52,7 +52,6 @@ The updates to the are straight forward since all we need to do is build the Doc
 
 The first thing to do is add the encrypted variables which are required to logon to Docker hub
 {% highlight PowerShell %}
-travis encrypt DOCKER_EMAIL=email@test.com --add
 travis encrypt DOCKER_USER=username --add
 travis encrypt DOCKER_PASS=password --add
 {% endhighlight %}
@@ -71,18 +70,20 @@ env:
 Add the `docker build` step after you run `go build` in your build chain.
 {% highlight YAML %}
 script:
- - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
- - docker build -t level-three-rest -t $REPO:$TAG -f Dockerfile .
+ - export TAG=`if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then echo "latest"; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi`
+ - export REPO=bhavikk/level-three-rest
+ - docker build -t $REPO:$TAG -f Dockerfile .
 {% endhighlight %}
 
 After a successful build, we login and then upload the docker image to Docker h ub. You can set the appropriate tags before uploading the image. One other interesting thing you can perform at this stage is running the docker image and running appropriate tests against it to ensure everything passes.
 {% highlight YAML %}
  after_success:
- - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
- - export REPO=bhavikk/level-three-rest
- - docker tag $REPO:$COMMIT $REPO:$TAG
- - docker tag $REPO:$COMMIT $REPO:$TRAVIS_BUILD_NUMBER
- - docker push $REPO
+ - docker login -u $DOCKER_USER -p $DOCKER_PASS
+ - if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
+   docker tag $REPO:$TAG $REPO:$TRAVIS_BUILD_NUMBER;
+   docker push $REPO:$TRAVIS_BUILD_NUMBER;
+   fi 
+ - docker push $REPO:$TAG
 {% endhighlight %}
 
 This is a great start, we now have a public repository with our Docker image which we can pull down and run after every commit. Most companies will not want their Docker images available publically, therefore in the next blog post, I'll show how you can  push the images to AWS EC2 Container Registry from Travis-CI.
