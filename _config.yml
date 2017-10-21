@@ -27,6 +27,9 @@ markdown: kramdown
 # Pagination settings
 paginate: 10
 
+sass:
+  style: compressed
+
 # Headers
 webrick:
   headers:
