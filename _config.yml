@@ -30,6 +30,9 @@ paginate: 10
 sass:
   style: compressed
 
+includes:
+- keybase.txt  
+
 # Headers
 webrick:
   headers:
