@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/bhavikk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bhavik.io
+  * I am bhavikk (https://keybase.io/bhavikk) on keybase.
+  * I have a public key ASDLT5Kj5oGLEP0NAOD_cJYkf8_Q_j0Gob3ZTEZf6DYu9wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f5b9360445cd83df0e2d1a9c5372f3336c7b0ef86295a86ea011cf74289eb0270a",
+      "host": "keybase.io",
+      "kid": "0120cb4f92a3e6818b10fd0d00e0ff7096247fcfd0fe3d06a1bdd94c465fe8362ef70a",
+      "uid": "420cbb15e3c0dc42f1caecbdd38d2019",
+      "username": "bhavikk"
+    },
+    "merkle_root": {
+      "ctime": 1513246761,
+      "hash": "c257d0da4a7cbb2fd5a4f11626d1b358e6a92369084bba890a3121c786b29c3df0c67b2f844446f5359af84f48f15d5edf73a9a87dfe40c242fda2e267f29d80",
+      "hash_meta": "1242f99fa432c553808d8db55a18dd04821458e6d36e21047d7e8e057d0cb294",
+      "seqno": 1816890
+    },
+    "service": {
+      "hostname": "bhavik.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.37"
+  },
+  "ctime": 1513246800,
+  "expire_in": 504576000,
+  "prev": "a53b08d0a01cbab21a52ff7416abeb6db8802cf8283d97e2d029b02babd09ace",
+  "seqno": 11,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgy0+So+aBixD9DQDg/3CWJH/P0P49BqG92UxGX+g2LvcKp3BheWxvYWTFA0F7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZjViOTM2MDQ0NWNkODNkZjBlMmQxYTljNTM3MmYzMzM2YzdiMGVmODYyOTVhODZlYTAxMWNmNzQyODllYjAyNzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwY2I0ZjkyYTNlNjgxOGIxMGZkMGQwMGUwZmY3MDk2MjQ3ZmNmZDBmZTNkMDZhMWJkZDk0YzQ2NWZlODM2MmVmNzBhIiwidWlkIjoiNDIwY2JiMTVlM2MwZGM0MmYxY2FlY2JkZDM4ZDIwMTkiLCJ1c2VybmFtZSI6ImJoYXZpa2sifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MTMyNDY3NjEsImhhc2giOiJjMjU3ZDBkYTRhN2NiYjJmZDVhNGYxMTYyNmQxYjM1OGU2YTkyMzY5MDg0YmJhODkwYTMxMjFjNzg2YjI5YzNkZjBjNjdiMmY4NDQ0NDZmNTM1OWFmODRmNDhmMTVkNWVkZjczYTlhODdkZmU0MGMyNDJmZGEyZTI2N2YyOWQ4MCIsImhhc2hfbWV0YSI6IjEyNDJmOTlmYTQzMmM1NTM4MDhkOGRiNTVhMThkZDA0ODIxNDU4ZTZkMzZlMjEwNDdkN2U4ZTA1N2QwY2IyOTQiLCJzZXFubyI6MTgxNjg5MH0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJiaGF2aWsuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zNyJ9LCJjdGltZSI6MTUxMzI0NjgwMCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiJhNTNiMDhkMGEwMWNiYWIyMWE1MmZmNzQxNmFiZWI2ZGI4ODAyY2Y4MjgzZDk3ZTJkMDI5YjAyYmFiZDA5YWNlIiwic2Vxbm8iOjExLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQATDhOw4HSAEAurLTlKzWyXLvUERnomkhIcFUayrFmZKsqVzUHA0QhAd0BwG7X6IZJuYIwdZCKTrmvQIZQDPzwOoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDcRDrScHPZlJfdoKY6FvgxUVxMFnh2HZA/wmsG7D8R+KN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bhavikk
+
+==================================================================
