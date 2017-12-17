@@ -35,9 +35,13 @@ includes:
 
 disqus: bhavik-1
 
+exclude:
+  - README.md
+  - LICENSE
+
 # Headers
 webrick:
   headers:
-    Content-Security-Policy: default-src https://fonts.gstatic.com 'self' 'unsafe-inline' script-src 'self' 'unsafe-inline' style-src https://fonts.googleapis.com 'self'
+    Content-Security-Policy: "default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com *.disqus.com *.disquscdn.com disqus.com; style-src 'self' fonts.googleapis.com *.disqus.com *.disquscdn.com; img-src 'self' www.google-analytics.com *.disqus.com *.disquscdn.com; frame-src 'self' disqus.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com"
     X-Frame-Options: "x-frame-options: SAMEORIGIN"
-    X-XSS-Protection: "X-XSS-Protection: 1; mode=block"
+    X-XSS-Protection: "1; mode=block"
