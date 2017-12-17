@@ -33,6 +33,8 @@ sass:
 includes:
 - keybase.txt
 
+disqus: bhavik-1
+
 # Headers
 webrick:
   headers:
