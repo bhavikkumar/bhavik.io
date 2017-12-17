@@ -17,8 +17,11 @@ layout: compress
       </div>
     </div>
 
-    {% include footer.html %}
+    {% if jekyll.environment == "production" %}
+       {% include comments.html %}
+    {% endif %}
 
+    {% include footer.html %}
   </body>
 
 </html>
