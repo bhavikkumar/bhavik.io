@@ -31,7 +31,7 @@ sass:
   style: compressed
 
 includes:
-- keybase.txt  
+- keybase.txt
 
 # Headers
 webrick:
