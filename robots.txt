@@ -1,2 +1,3 @@
 User-Agent: *
 Disallow: /.well-known/keybase.txt
+Sitemap: https://bhavik.io/sitemap.xml

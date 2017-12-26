@@ -6,7 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Gems
-plugins: [jekyll-paginate, jekyll-email-protect]
+plugins:
+  - jekyll-paginate
+  - jekyll-email-protect
+  - jekyll-sitemap
 
 # Site settings
 title: Bhavik Kumar
