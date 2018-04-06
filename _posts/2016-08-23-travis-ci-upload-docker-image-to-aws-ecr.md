@@ -45,7 +45,9 @@ The following policy will grant the Travis-CI build user to create AWS ECR repos
   "ecr:GetAuthorizationToken",
   "ecr:GetDownloadUrlForLayer",
   "ecr:InitiateLayerUpload",
-  "ecr:UploadLayerPart"
+  "ecr:UploadLayerPart",
+  "ecr:BatchCheckLayerAvailability",
+  "ecr:PutImage"
 ],
 "Effect": "Allow",
 "Resource": "*"
