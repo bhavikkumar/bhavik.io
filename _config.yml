@@ -17,7 +17,7 @@ email: contact@bhavik.io
 description: > # this means to ignore newlines until "baseurl:"
   <b>Bhavik</b> is a software engineer. He started his career by
   working for one of New Zealand's largest IT consultancies. Now
-  he works for a large FMCG co-operative.
+  he works for a start-up in cryptocurrency space.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bhavik.io" # the base hostname & protocol for your site
 twitter_username: BhavikKumarNZ
