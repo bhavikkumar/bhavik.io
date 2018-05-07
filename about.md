@@ -10,7 +10,7 @@ permalink: /about/
 
 I call myself a Software Engineer, but in reality it can involve a lot more than just writing some code. I'm fortunate enough to be building new software most of the time and really enjoy it. Most of the systems I've helped build over the years are not seen by end users. They help enable phones to work on a mobile networks or allow a payment to be switched to the correct location so that it can be processed.
 
-In my spare time, you'll find me travelling, usually to spectacular locations around New Zealand to photograph. I also love travelling with my snowboard and try to spend 2-3 weeks a year in the snow. I'm also a bit of a car guy and would love to have a project car which I can take to the track.
+In my spare time, you'll find me travelling, usually to spectacular locations around New Zealand to photograph. I also love travelling with my snowboard and try to spend 2-3 weeks a year in the snow. I'm also a bit of a car guy and one day I would love to have a project car for the track.
 
 #### About this blog
 
