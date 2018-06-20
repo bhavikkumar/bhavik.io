@@ -11,7 +11,7 @@ At the end of this guide, we will have HAProxy deployed on every node with the f
 - Deployed as a Docker Swarm Mode service
 
 ## HAProxy Template Configuration
-The following is the haproxy.json file which I created for consul template. It defines the location of the template, the destination of the HAProxy configuration and the command to run HAProxy with.
+The following is the haproxy.hcl file which I created for consul template. It defines the location of the template, the destination of the HAProxy configuration and the command to run HAProxy with.
 {%raw%}
 ```
 template {
@@ -98,7 +98,7 @@ RUN wget --no-check-certificate https://releases.hashicorp.com/consul-template/$
 RUN touch /run/haproxy.sock
 RUN chmod 777 /run/haproxy.sock
 
-COPY haproxy.json /tmp/haproxy.json
+COPY haproxy.hcl /tmp/haproxy.hcl
 COPY haproxy.ctmpl /tmp/haproxy.ctmpl
 
 ENTRYPOINT ["consul-template"]
@@ -126,7 +126,7 @@ services:
       default_net:
         aliases:
           - haproxy.server
-    command: "-config=/tmp/haproxy.json -consul-addr=consul.server:8500"
+    command: "-config=/tmp/haproxy.hcl -consul-addr=consul.server:8500"
     ports:
       - target: 80
         published: 80
