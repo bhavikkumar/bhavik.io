@@ -159,6 +159,16 @@ During this process you will be prompted for your Yubikeys admin pin.
 10. Select `q`
 11. Type `quit` to exit
 
+# Setting up GPG on another machine
+If you are like me, you will have a couple of machines which you need to setup. Once GPG4Win is installed you can run the following commands and your Yubikey will work exactly like on the first machine that was setup.
+
+This assumes you have your public key on the internet and setup the url on your Yubikey as well.
+```
+gpg --card-edit
+fetch
+quit
+```
+
 # Setup Git
 Assuming you have GIT installed, the following commands can be run to setup Git to sign commits.
 
@@ -195,13 +205,3 @@ gpg --export-ssh-key contact@bhavik.io > id_rsa.pub
 ```
 
 Now you can upload this public key to GitHub and machines which you need to SSH to and your Yubikey will need to be plugged in and GPG will prompt for your PIN.
-
-# Setting up GPG on another machine
-If you are like me, you will have a couple of machines which you need to setup. One GPG4Win is installed you can run the following commands and your Yubikey will be ready to go on that machine.
-
-This assumes you have your public key on the internet and setup the url on your Yubikey as well.
-```
-gpg --card-edit
-fetch
-quit
-```
