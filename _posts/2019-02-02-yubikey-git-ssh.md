@@ -109,7 +109,7 @@ sub   rsa4096/SIGNINGKEYID 2017-12-13 [S] [expires: 2033-12-09]
 
 Run the following command and then I recommend putting the output on a encrypted USB stick and storing it in a safe place. This will allow you to recover your private keys on to another Yubikey, just in case your current one fails.
 ```
-gpg --export-secret-key --armor MYKEYID
+gpg --export-secret-key --armor MASTERKEYID
 ```
 
 It is also a good idea to export your public key using the following command:
@@ -117,7 +117,7 @@ It is also a good idea to export your public key using the following command:
 gpg --armor --export contact@bhavik.io > public_gpg.asc
 ```
 
-I recommend updating your Keybase public key with the exported one, if you went down the keybase route. Otherwise I recommend it uploading to a public location on the internet (E.g: Github gist). This will help when setting up your Yubikey on another machine and also allow people to send you encrypted messages.
+I recommend updating your Keybase public key with the exported one. Even if you don't use Keybase I recommend it uploading to a public location on the internet (E.g: Github gist). This will help when setting up your Yubikey on another machine and also allow people to send you encrypted messages.
 
 # Importing your private keys on to your Yubikey
 Insert your Yubikey 5 into your machine and run the following command:
