@@ -153,9 +153,9 @@ During this process you will be prompted for your Yubikeys admin pin.
 4. Type `url` and enter in the url of your public key
 5. Type `passwd`
 6. Select `1`
-7. When prompted enter in the default pin of `123456` and then enter a new pin which can be alphanumeric.
+7. When prompted enter in the default pin of `123456` and then enter a new pin which I recommend to be a passphrase of up to 127 characters.
 8. Select `3`
-9. When prompted enter in the default admin pin of `12345678` and then enter a new pin which can be alphanumeric.
+9. When prompted enter in the default admin pin of `12345678` and then enter a new pin I recommend to be a passphrase of up to 127 characters. Do not use the same passphrase as the normal pin.
 10. Select `q`
 11. Type `quit` to exit
 
