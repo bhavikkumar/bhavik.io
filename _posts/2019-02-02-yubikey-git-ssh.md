@@ -204,4 +204,4 @@ Run the following command to get a public ssh key:
 gpg --export-ssh-key contact@bhavik.io > id_rsa.pub
 ```
 
-Now you can upload this public key to GitHub and machines which you need to SSH to and your Yubikey will need to be plugged in and GPG will prompt for your PIN.
+Now you can upload this public key to machines and GitHub for SSH. Your Yubikey will need to be plugged in and GPG will prompt for your PIN as your private key is stored on the key.
